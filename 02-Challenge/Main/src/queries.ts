@@ -1,8 +1,8 @@
+import { Pool } from 'pg';
 
-const { Pool } = require('pg');
-let pool;
+let pool: Pool;
 
-function setPool(dbPool) {
+function setPool(dbPool: Pool) {
     pool = dbPool;
 }
 
@@ -66,4 +66,4 @@ async function updateEmployeeRole() {
     console.log('Employee role updated.');
 }
 
-module.exports = { setPool, viewDepartments, viewRoles, viewEmployees, addDepartment, addRole, addEmployee, updateEmployeeRole };
+export { setPool, viewDepartments, viewRoles, viewEmployees, addDepartment, addRole, addEmployee, updateEmployeeRole };
